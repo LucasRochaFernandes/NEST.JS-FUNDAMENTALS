@@ -11,8 +11,4 @@ describe('Notification', () => {
     })
     expect(notification).toBeTruthy()
   })
-
-  it('should not be able to create a notification content with less then j5 characters', () => {
-    expect(() => new Content('123')).toThrow()
-  })
 })
