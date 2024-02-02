@@ -1,5 +1,6 @@
 import { Content } from '../entities/content'
 import { Notification } from '../entities/notification'
+import { NotificationsRepository } from '../repositories/notifications-repository'
 
 interface SendNotificationUseCaseRequest {
   recipientId: string
@@ -12,6 +13,9 @@ interface SendNotificationUseCaseResponse {
 }
 
 export class SendNotificationUseCase {
+  // eslint-disable-next-line no-useless-constructor
+  constructor(private notificationsRepository: NotificationsRepository) {}
+
   async execute(
     request: SendNotificationUseCaseRequest,
   ): Promise<SendNotificationUseCaseResponse> {
@@ -21,6 +25,8 @@ export class SendNotificationUseCase {
       content: new Content(content),
       category,
     })
+
+    await this.notificationsRepository.create(notification)
     return { notification }
   }
 }
