@@ -21,7 +21,9 @@
     "strictPropertyInitialization": false,
     "paths":{
       "@/*": ["./src/*"],
-      "@test/*": ["./test/*"],
-    }
+      "@test/*": ["./test/*"]
+    },
+
+    "resolveJsonModule": true
   }
 }

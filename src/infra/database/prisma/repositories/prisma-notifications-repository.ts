@@ -8,6 +8,11 @@ import { PrismaNotificationMapper } from '../mappers/prisma-notification-mapper'
 export class PrismaNotificationsRepository implements NotificationsRepository {
   // eslint-disable-next-line no-useless-constructor
   constructor(private prismaService: PrismaService) {}
+  async findById(notificationId: string): Promise<Notification | null> {
+    return null
+  }
+
+  async save(notification: Notification): Promise<void> {}
 
   async create(notification: Notification): Promise<void> {
     const raw = PrismaNotificationMapper.toPrisma(notification)
