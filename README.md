@@ -8,7 +8,7 @@ This project is an API REST with Nest.JS, being my first project with this frame
   - Jest
 
 #### To run this project 
-You need to clone this repository. Then, you can run in the terminal to install the dependencies and test the API the commands bellow:
+You need to clone this repository. Then, you can run in the terminal the commands bellow, to install the dependencies and test the API:
 ```bash
 npm i
 ```
